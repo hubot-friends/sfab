@@ -204,7 +204,7 @@ class SiteFabricator {
                     console.error('file', file.name)
                     throw err
                 }
-                html = html.split('\n').map(line => line.trim().replace(/^\s+/, '')).join('\n')
+                html = html.split('\n').map(line => line.trim()).join('\n')
     
                 const transformedFilePath = path.join(destinationFolderToCreate, file.name.replace('.md', '.html'))
                 log('Creating', transformedFilePath)
